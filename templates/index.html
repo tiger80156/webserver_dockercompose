@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<style type="text/css">
+	.fillInform{
+		position: relative;
+		width: 250px;
+		left: 50px;
+		top: 50px;
+	}
+	p{
+		font-size: 120%;
+	}
+	</style>
+
+
+	<div class="form-group fillInform">
+		<form action="create" method="post">
+			{{ form.hidden_tag() }}
+			<fieldset class="form-group">
+				<div class="form-group">
+					{{ form.Username.label(class="form-control-label") }}
+					{{ form.Username(class="form-control") }}
+				</div>
+
+				<div class="form-group">
+					{{ form.Password.label(class="form-control-label") }}
+					{{ form.Password(class="form-control") }}
+				</div>
+
+			</fieldset>
+			<div class="form-group">
+				{{ form.submit(class="btn btn-outline-info")}}
+			</div>
+				
+		</form>
+	</div>
+</body>
+</html>
